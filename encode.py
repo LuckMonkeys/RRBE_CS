@@ -102,7 +102,7 @@ def encode(matrixB, infoList, Aindex):
                     if interpolation_matrixB[i][j] == 0 or interpolation_matrixB[i][j] == 255:
                         boundary_map.append(0)
                     else:
-                        e[i][j], flag = additive_expansion(sample_lm, sample_ln, sample_rm, sample_rn, dataList[p], error[i][j])
+                        error[i][j], flag = additive_expansion(sample_lm, sample_ln, sample_rm, sample_rn, dataList[p], error[i][j])
                         p += flag
 
                         if interpolation_matrixB_withSample[i][j] + error[i][j] == 0 or interpolation_matrixB_withSample[i][j] + error[i][j] == 255:
